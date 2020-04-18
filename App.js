@@ -5,7 +5,7 @@ import BottomNavigation from './src/screens/BottomNavigation';
 
 export default function App() {
   return (
-    <Router />
-    // <BottomNavigation />
+    // <Router />
+    <BottomNavigation />
   );
 }
