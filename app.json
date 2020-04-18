@@ -1,0 +1,17 @@
+{
+  "name": "covid19india_app",
+  "displayName": "covid19india_app",
+  "expo": {
+    "name": "covid19india_app",
+    "slug": "covid19india_app",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
