@@ -1,7 +1,12 @@
 import React from 'react';
 import { Image, Dimensions, TouchableOpacity, View, Text } from 'react-native';
 import style from './styles'
-import BannerImage from '../../assets/images/Corona.svg'
+import Swiper from 'react-native-swiper';
+import Corona from '../../assets/images/Corona.svg'
+import HandWashing from '../../assets/images/HandWashing.svg'
+import HighFever from '../../assets/images/HighFever.svg'
+import Quarantine from '../../assets/images/Quarantine.svg'
+
 
 export default class Banner extends React.Component {
   render() {
@@ -12,7 +17,12 @@ export default class Banner extends React.Component {
           <Text style={style.headText} >Stay Safe</Text>
         </View>
         <View style={style.imgContainer}>
-          <BannerImage />
+          <Swiper autoplay dot={<View />} activeDot={<View />} >
+            <Corona />
+            <HandWashing />
+            <HighFever />
+            <Quarantine />
+          </Swiper>
         </View>
       </View>
     );
