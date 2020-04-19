@@ -6,6 +6,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import styles from "./style";
 import Home from '../Home';
 import Dashboard from '../Dashboard'
+import SelfAssess from '../SelfAssess'
+
 
 function HomeScreen() {
   return (
@@ -20,6 +22,14 @@ function DashboardScreen() {
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       <Dashboard />
     </View>
+  );
+}
+
+function SelfAssessScreen() {
+  return (
+    // <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <SelfAssess />
+    // </View>
   );
 }
 
@@ -62,6 +72,7 @@ export default function BottomNavigation() {
       >
         <Tab.Screen style={{fontSize: 20}} name="Home" component={HomeScreen} />
         <Tab.Screen name="Dashboard" component={DashboardScreen} />
+        <Tab.Screen name="SelfAssess" component={SelfAssessScreen} />
         <Tab.Screen name="Settngs" component={HomeScreen} />
       </Tab.Navigator>
     </NavigationContainer>
