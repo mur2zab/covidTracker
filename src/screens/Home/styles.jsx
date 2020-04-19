@@ -12,6 +12,8 @@ let style = StyleSheet.create({
   pickerContainer: {
     flexDirection: "row",
     justifyContent: "center",
+    borderColor: '#FFFFFF',
+    borderBottomWidth: 1,
     // backgroundColor: 'yellow'
   },
   pickerText: {
@@ -20,10 +22,17 @@ let style = StyleSheet.create({
   },
   pickerDropdown: {
     height: wp(responsive('19')),
-    width: wp(responsive('150')),
-    color: "#FFFFFF",
-    borderColor: '#FFFFFF',
-    borderBottomWidth: 1,
+    width: wp(responsive('200')),
+    color: "#FFFFFF"
+  },
+  updateTimeContainer: {
+    flexDirection: "row",
+    justifyContent: "space-around",
+    marginTop: wp(responsive('15')),
+  },
+  updateTimeText: {
+    color: "white",
+    fontSize: wp(responsive('15'))
   }
 });
 

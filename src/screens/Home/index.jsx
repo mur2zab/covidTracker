@@ -42,11 +42,12 @@ export default function Home() {
         <Banner />
         <View style={style.dropdownContainer}>
           <Text style={style.pickerText}> Select state : </Text>
-          <View style={style.pickerDropdown}>
+          <View style={style.pickerContainer}>
             <Picker
               selectedValue={selectedState}
               style={style.pickerDropdown}
               onValueChange={(itemValue, itemIndex) => setSelectedValue(itemValue)}
+              mode="dropdown"
             >
               {fetched && data.map(eachRow => {
                 return (
@@ -61,6 +62,9 @@ export default function Home() {
           <Card textColor="#494CFF" title={stateDataFetched && stateData.active} subText="Active" />
           <Card textColor="#00B73E" title={stateDataFetched &&  stateData.recovered} subText="Recovered" />
           <Card textColor="#6C747E" title={stateDataFetched &&  stateData.deaths} subText="Deceased" />
+        </View>
+        <View style={style.updateTimeContainer}>
+          <Text style={style.updateTimeText}>{ stateDataFetched && `Last Update at : ${stateData.lastupdatedtime}`} </Text>
         </View>
       </ScrollView>
     </SafeAreaView>
